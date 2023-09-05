@@ -1,0 +1,278 @@
+@import url('https://fonts.cdnfonts.com/css/recoleta');
+
+* {
+    font-family: 'Recoleta';
+    padding: 10px;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: fit-content fit-content(100px) 8fr;
+    grid-template-columns: fit-content(100px) 6fr;
+    grid-row-gap: 0px;
+    grid-column-gap: 3px;
+    height: fit-content;
+    background: url(Pictures/pastel7.png) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #00426a;
+
+
+}
+
+.mainContainer {
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 10px 40px;
+
+}
+
+.sidebar {
+    grid-row: 1/7;
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sidebar .list {
+    list-style: none;
+}
+
+.sidebar .list li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    line-height: 3px;
+}
+
+
+
+img {
+    width: 70px;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+
+.dashboard {
+    height: fit-content;
+    grid-row: span 1;
+    grid-column: 2/4;
+    text-align: left;
+    /* color: #cc3857; */
+    color: white;
+    line-height: 15px;
+}
+
+.dashboard h1 {
+    font-size: 2.5em;
+}
+
+.dashboard p {
+    font-style: italic;
+    /* margin-left: 10px; */
+}
+
+
+.dashboardNav {
+    height: fit-content;
+    grid-row: span 1;
+    grid-column: 2/4;
+    /* border: 2px solid white;
+    border-radius: 10px; */
+}
+
+.dashboardNav a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #0A2342;
+    margin-left: 20px;
+}
+
+.dashboardNav a:hover {
+    font-weight: 500;
+    text-decoration: underline;
+    color: white;
+}
+
+.dashboardNav a.active {
+    font-weight: bolder;
+    color: #cc3857;
+    background-color: #f6e1e1;
+    border: #f6e1e1 3px solid;
+    border-radius: 10px;
+    padding-bottom: 30px;
+}
+
+.theBody {
+    background-color: #f6e1e1;
+    border-radius: 10px;
+    padding: 1px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.theBody .task,
+.theBody .date,
+.theBody .taskforEdit {
+    width: 20%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #cc385882;
+    border-radius: 40px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.theBody .editButton {
+    width: 50%;
+    height: 45px;
+    background: #cc3857;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Responsive Design On smaller screens */
+@media only screen and (max-width: 768px) {
+
+    * {
+        padding: 5px;
+    }
+
+
+
+    .mainContainer {
+        grid-row: span 1;
+        grid-column: 1/7;
+        backdrop-filter: blur(30px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        padding: 10px 40px;
+    }
+
+    .dashboard {
+        height: fit-content;
+        line-height: 12px;
+    }
+
+    .theBody {
+        background-color: #f6e1e1;
+        border-radius: 10px;
+        padding: 1px;
+        padding-top: 5px;
+    }
+
+    .sidebar {
+        grid-row: 5/6;
+        grid-column: span 6;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        padding: 20px 0;
+        backdrop-filter: blur(30px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+    }
+
+
+    img {
+        width: 40px;
+        padding: 0;
+        margin-bottom: 1px;
+    }
+
+    .sidebar .list li a {
+        line-height: 1px;
+    }
+
+
+    .dashboard h1 {
+        font-size: 2em;
+    }
+
+
+
+    .dashboardNav {
+        height: fit-content;
+    }
+
+
+    .dashboardNav a {
+        font-size: 0.8em;
+        text-decoration: none;
+        color: #0A2342;
+        margin-left: 0px;
+    }
+
+    .dashboardNav a:hover {
+        font-weight: 300;
+    }
+
+    .dashboardNav a.active {
+        border: #f6e1e1 2px solid;
+    }
+
+    .theBody h1 {
+        font-size: 1.25em;
+        padding: 10px;
+    }
+
+    .theBody .actionOptions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .Action .ActionHeader {
+        width: 100px;
+    }
+
+    .ActionHeader .actionName {
+        font-size: 1em;
+    }
+
+    /* __________________________________________________________________________________________________________ */
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .theBody select.taskforEdit,
+    .theBody .date,
+    .theBody .task {
+        display: block;
+        font-size: 0.6em;
+        padding: 10px 10px;
+        width: 92%;
+    }
+
+    .theBody .editButton {
+        height: 25px;
+        font-size: 0.8em;
+        font-weight: 300;
+        width: 99%;
+    }
+
+    /* __________________________________________________________________________________________________________ */
+
+    footer {
+        grid-row: 6/7;
+        grid-column: span 6;
+        width: 100%;
+        color: #e3dada;
+        padding: 10px 0;
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,485 @@
+@import url('https://fonts.cdnfonts.com/css/recoleta');
+
+* {
+    font-family: 'Recoleta';
+    padding: 10px;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: fit-content fit-content(100px) 8fr;
+    grid-template-columns: fit-content(100px) 6fr;
+    grid-row-gap: 0px;
+    grid-column-gap: 3px;
+    height: fit-content;
+    background: url(Pictures/pastel7.png) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #00426a;
+
+
+}
+
+.mainContainer {
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 10px 40px;
+}
+
+.sidebar {
+    grid-row: 1/7;
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer {
+    font-size: 15px;
+    text-align: center;
+    padding: 20px 0;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.sidebar .list {
+    list-style: none;
+}
+
+.sidebar .list li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    line-height: 3px;
+}
+
+.sidebar .list li a:hover {
+    font-weight: 700;
+}
+
+img {
+    width: 70px;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+
+
+.dashboard {
+    height: fit-content;
+    text-align: left;
+    color: white;
+    line-height: 15px;
+}
+
+.dashboard h1 {
+    font-size: 2.5em;
+}
+
+.dashboard p {
+    font-style: italic;
+}
+
+
+.dashboardNav {
+    height: fit-content;
+}
+
+.dashboardNav a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #0A2342;
+    margin-left: 20px;
+}
+
+.dashboardNav a:hover {
+    font-weight: 500;
+    text-decoration: underline;
+    color: white;
+}
+
+.dashboardNav a.active {
+    font-weight: bolder;
+    color: #cc3857;
+    background-color: #f6e1e1;
+    border: #f6e1e1 3px solid;
+    border-radius: 10px;
+    padding-bottom: 30px;
+}
+
+.theBody {
+    background-color: #f6e1e1;
+    border-radius: 10px;
+    padding: 1px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.theBody h1 {
+    text-align: center;
+}
+
+.theBody .actionOptions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    grid-gap: 5px;
+}
+
+.Action .ActionHeader {
+    grid-column: span 1;
+    height: max-content;
+    width: 150px;
+    border: 1px solid #00588f20;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #4f5c644c;
+    color: #00426a;
+    text-align: center;
+
+}
+
+.Action .ActionHeader:hover {
+    color: #cc3857;
+}
+
+:root {
+    --Iconsax-Size: 20px;
+    --Iconsax-Color: #00426a;
+}
+
+.actionOptions .ActionContent {
+    display: none;
+    padding: 40px 40px;
+    transition: max-height 0.2s ease-out;
+    height: max-content;
+    border: 1px solid #00588f20;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #4f5c644c;
+    color: #00426a;
+    background-color: #f6e1e1;
+    text-align: center;
+}
+
+
+.actionOptions .ActionContent.active {
+    grid-column: 2/5;
+    top: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.ActionContent .datetime,
+.ActionContent .foodType,
+.ActionContent .amount,
+.ActionContent .duration,
+.date {
+    background-color: transparent;
+    border: none;
+    border: 1px solid #00426a;
+    border-radius: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+.milkType input,
+.diaperType input {
+    opacity: 0;
+    margin-top: 20px;
+}
+
+.milkType label,
+.diaperType label {
+    border: 1px solid #00426a;
+    border-radius: 40px;
+    padding: 10px 60px;
+    color: #00426a;
+}
+
+
+.milkType input:checked+label,
+.diaperType input:checked+label {
+    background-color: #d1e9f9;
+    border: #00426a solid;
+    color: #00426a;
+}
+
+.milkType label:hover,
+.diaperType label:hover {
+    background-color: #d1e9f9;
+    border: #00426a dashed;
+    color: #00426a;
+}
+
+.ActionContent .AddTracker {
+    width: 60%;
+    height: 45px;
+    margin-top: 30px;
+    background: #cc3857;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+}
+
+.AddTracker:hover {
+    border: dotted white;
+}
+
+.track {
+    width: 20%;
+    height: 45px;
+    margin-top: 30px;
+    background: #cc3857;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+}
+
+
+.mainContainer .theBody .actionsList {
+    width: 95%;
+    margin: 10px auto;
+    padding: 20px 10px;
+    border-radius: 10px;
+    line-height: 2px;
+
+}
+
+.actionsList .actionItem {
+    width: 95%;
+    margin: 10px auto;
+    padding: 30px 20px;
+    border-radius: 20px;
+    color: #e3dada;
+    background-color: #00426a;
+    position: relative;
+
+}
+
+.actionsList h1 {
+    color: #00426a;
+    padding: 30px;
+}
+
+.actionsList h2 {
+    padding: 5px 0px;
+    font-size: 20px;
+    line-height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.actionsList .actionDescription a {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #e3dada;
+}
+
+/* Responsive Design On smaller screens */
+@media only screen and (max-width: 768px) {
+
+    * {
+        padding: 5px;
+    }
+
+
+
+    .mainContainer {
+        grid-row: span 1;
+        grid-column: 1/7;
+        backdrop-filter: blur(30px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        padding: 10px 40px;
+    }
+
+    .dashboard {
+        height: fit-content;
+        line-height: 12px;
+    }
+
+    .theBody {
+        background-color: #f6e1e1;
+        border-radius: 10px;
+        padding: 1px;
+        padding-top: 5px;
+    }
+
+    .sidebar {
+        grid-row: 5/6;
+        grid-column: span 6;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        padding: 20px 0;
+        backdrop-filter: blur(30px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+    }
+
+
+    img {
+        width: 40px;
+        padding: 0;
+        margin-bottom: 1px;
+    }
+
+    .sidebar .list li a {
+        line-height: 1px;
+    }
+
+
+    .dashboard h1 {
+        font-size: 2em;
+    }
+
+
+
+    .dashboardNav {
+        height: fit-content;
+    }
+
+
+    .dashboardNav a {
+        font-size: 0.8em;
+        text-decoration: none;
+        color: #0A2342;
+        margin-left: 0px;
+    }
+
+    .dashboardNav a:hover {
+        font-weight: 300;
+    }
+
+    .dashboardNav a.active {
+        border: #f6e1e1 2px solid;
+    }
+
+    .theBody h1 {
+        font-size: 1.25em;
+        padding: 10px;
+    }
+
+    .theBody .actionOptions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .Action .ActionHeader {
+        width: 100px;
+    }
+
+    .ActionHeader .actionName {
+        font-size: 1em;
+    }
+
+
+
+    /* The different input field in the tracker */
+
+    .actionOptions .ActionContent {
+        padding: 7px 7px;
+    }
+
+    .ActionContent .datetime,
+    .ActionContent .foodType,
+    .ActionContent .amount,
+    .ActionContent .duration,
+    .date {
+        font-size: 0.5em;
+    }
+
+    .milkType input,
+    .diaperType input {
+        margin-top: 10px;
+    }
+
+    .milkType label,
+    .diaperType label {
+        padding: 5px 10px;
+        font-size: 0.5em;
+    }
+
+    .ActionContent h1 {
+        font-size: 1em;
+    }
+
+
+    .ActionContent .AddTracker {
+        width: 60%;
+        height: 25px;
+        margin-top: 10px;
+        font-size: 0.6em;
+        font-weight: 300;
+    }
+
+    /* __________________________________________________________________________________________________________ */
+    /* The list of tracked actions */
+    .track {
+        height: 25px;
+        margin-top: 10px;
+        font-size: 0.8em;
+        font-weight: 300;
+    }
+
+    .mainContainer .theBody .actionsList {
+        margin: 5px auto;
+        padding: 5px 5px;
+        line-height: 1px;
+    }
+
+    .actionsList .actionItem {
+        width: 95%;
+        margin: 5px auto;
+        padding: 20px 10px;
+
+    }
+
+    .actionsList h1 {
+        padding: 10px;
+        font-size: 1.5em;
+    }
+
+    .actionsList h2 {
+        padding: 5px 0px;
+        font-size: 1em;
+        line-height: 10px;
+    }
+
+    .actionsList p {
+        font-size: 0.6em;
+    }
+
+    .actionsList .actionDescription a {
+        font-size: 20px;
+    }
+
+    /* __________________________________________________________________________________________________________ */
+
+    footer {
+        grid-row: 6/7;
+        grid-column: span 6;
+        width: 100%;
+        color: #e3dada;
+        padding: 10px 0;
+        font-size: 10px;
+    }
+}
